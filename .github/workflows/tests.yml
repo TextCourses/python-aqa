@@ -23,3 +23,12 @@ jobs:
 
       - name: Запуск тестов
         run: pytest
+
+      - name: Генерация HTML-отчёта
+        run: pytest --html=report.html
+
+      - name: Сохранение артефакта
+        uses: actions/upload-artifact@v3
+        with:
+          name: pytest-report
+          path: report.html
