@@ -1,7 +1,9 @@
 # tests/test_example.py
 import os
 import requests
+from dotenv import load_dotenv
 
+load_dotenv()
 URL = os.getenv("APP_URL")
 
 def test_sum():
