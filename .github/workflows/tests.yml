@@ -11,8 +11,8 @@ jobs:
       APP_URL: "https://api.restful-api.dev/"
 
     steps:
-      - name: Print variable
-        run: echo "The value is ${{ env.MY_VARIABLE }}"
+      - name: Print APP_URL
+        run: echo "The value is ${{ env.APP_URL }}"
 
       - name: Checkout репозиторий
         uses: actions/checkout@v3
