@@ -22,5 +22,6 @@ def test_api_auth():
         "Accept": "application/json",
         "Authorization": AUTH_TOKEN
     }
+    print(AUTH_TOKEN)
     response = requests.get("https://httpbin.org/bearer", headers=headers)
     assert response.status_code == 200
