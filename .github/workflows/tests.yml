@@ -9,6 +9,7 @@ jobs:
 
     env:
       APP_URL: "https://api.restful-api.dev/"
+      AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
 
     steps:
       - name: Print APP_URL
@@ -28,13 +29,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Запуск тестов
-        env:
-          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
         run: pytest
 
       - name: Генерация HTML-отчёта
-        env:
-          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
         run: pytest --html=report.html
 
       - name: Сохранение артефакта
