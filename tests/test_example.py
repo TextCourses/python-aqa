@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 URL = os.getenv("APP_URL")
-AUTH_TOKEN = os.environ["AUTH_TOKEN"]
+AUTH_TOKEN = os.getenv("AUTH_TOKEN")
 
 def test_sum():
     assert 1 + 1 == 2

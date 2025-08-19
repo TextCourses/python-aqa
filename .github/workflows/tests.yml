@@ -12,9 +12,6 @@ jobs:
       AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
 
     steps:
-      - name: Print APP_URL
-        run: echo "The value is ${{ env.APP_URL }}"
-
       - name: Checkout репозиторий
         uses: actions/checkout@v3
 
