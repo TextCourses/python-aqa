@@ -29,10 +29,10 @@ jobs:
         run: pytest
 
       - name: Генерация HTML-отчёта
-        run: pytest ./tests --html=./reports/report.html
+        run: pytest --html=report.html
 
       - name: Сохранение артефакта
         uses: actions/upload-artifact@v4
         with:
           name: pytest-report
-          path: reports
+          path: report.html
